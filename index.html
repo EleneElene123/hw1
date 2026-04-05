@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center/cover;
+    position: relative;
+}
+
+/* ეს ქმნის "opacity"-ს ეფექტს */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5); /* შეცვალე 0.5 → 0.2 / 0.7 */
+    z-index: 1;
+}
+
+/* კონტენტი ზემოთ რომ გამოჩნდეს */
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fdea7c;
+    font-weight: bold;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.logo img {
+    width: 55px;
+}
+
+/* Content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+}
+
+.content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #fff5bc;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    background: rgb(228, 110, 0);;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* rounded */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: rgb(228, 110, 0);
+    padding: 12px 25px;
+    border: 2px solid rgb(228, 110, 0);
+    border-radius: 30px; /* rounded */
+    cursor: pointer;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Rice with chopsticks Icon -->
+<div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="rice with chopsticks">
+</div>
+<div class="overlay"></div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Review</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <h1>
+        GOODBYE VEGAN FOOD.<br>
+        HELLO SUPER MEAT FOOD.
+    </h1>
+
+    <div class="buttons">
+        <button class="btn-primary">I'm Hungry</button>
+        <button class="btn-secondary">Show me more</button>
+    </div>
+</div>
+
+</body>
+</html>
